@@ -26,7 +26,7 @@ import AdminDashboard from "../pages/admin/AdminDashboard.jsx";
 import AdminUsers from "../pages/admin/AdminUsers.jsx";
 import AdminQuizzes from "../pages/admin/AdminQuizzes.jsx";
 import AdminQuestionManagement from "../pages/admin/AdminQuestionManagement.jsx";
-import AdminAttempts from "../pages/admin/AdminAttempts.jsx";
+import AdminAttempts from "../pages/admin/AdminAttempts.jsx"; 
 import AdminReports from "../pages/admin/AdminReports.jsx";
 import AdminLeaderboard from "../pages/admin/AdminLeaderboard.jsx";
 import CreateQuiz from "../pages/admin/CreateQuiz.jsx";
@@ -151,6 +151,15 @@ const AppRoutes = () => {
           element={
             <ProtectedRoute allowedRoles={["ADMIN"]}>
               <AdminLeaderboard />
+            </ProtectedRoute>
+          }
+        />
+
+        <Route
+          path="/admin/attempts/"
+          element={
+            <ProtectedRoute allowedRoles={["ADMIN"]}>
+              <AdminAttempts/>
             </ProtectedRoute>
           }
         />
